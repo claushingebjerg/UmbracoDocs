@@ -12,6 +12,12 @@ To render a property based on the grid inside a template you should use the Html
 @Html.GetGridHtml(Model.Content, "propertyAlias")
 ```
 
+or in V8:
+
+```csharp
+@Html.GetGridHtml(Model, "propertyAlias")
+```
+
 This will render the grid item with alias "propertyAlias" from the current page models' content.
 
 This will by default use the view `/views/partials/grid/bootstrap3.cshtml` you can also use other provided grid template rendering files - for example the built-in bootstrap2.cshtml view by overloading this helper: 
