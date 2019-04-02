@@ -80,6 +80,17 @@ In Umbraco v7.3.5 a UrlHelper Extension method was introduced to replace the IPu
 
 ### MVC View Example to output create custom crops - in this case forcing a 300 x 400 px image
 
+#### Typed (Umbraco v8.0+):
+```csharp
+@{
+    var mediaItem = Model.Value<IPublishedContent>("image");
+    if (mediaItem != null)
+    {
+        <img src="@Url.GetCropUrl(mediaItem, height: 300, width: 400)" />
+    }
+}
+```
+
 #### Typed (Umbraco v7.3.5+):
 
 ```csharp
