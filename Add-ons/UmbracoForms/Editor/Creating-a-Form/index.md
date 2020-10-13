@@ -130,3 +130,9 @@ Navigate to the Content section of the Umbraco Backoffice and select the content
 The form should be inserted on to your page and all that's left to do is click of the *Save and publish* button.
 
 ![Content page with form](images/ContentExamplesWithForm.png)
+
+### Render Form Picker
+
+In your template or partial you can use the following snippet to render the Form Picker
+
+@Umbraco.RenderMacro("renderUmbracoForm", new { FormGuid = Model.Value("yourForm") })
